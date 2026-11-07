@@ -17,16 +17,16 @@ const geistMono = Geist_Mono({
 // BAGIAN METADATA (TAMENG GATEWAY 18+)
 // ==========================================
 export const metadata: Metadata = {
-  title: "Access Verification", 
+  title: "Access Verification",
   description: "Please verify your age to continue to the content.",
   openGraph: {
     title: "Access Verification",
     description: "Please verify your age to continue to the content.",
-    url: "https://safe-page.vercel.app",
+    url: "https://dewa76kita.vercel.app",
     siteName: "Content Gateway",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1614064641913-6b7140414c71?w=800",
+        url: "https://images.unsplash.com/photo-1614064641913-6b7140414c71?w=1200&q=80",
         width: 1200,
         height: 630,
         alt: "Security Verification",
