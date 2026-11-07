@@ -35,9 +35,6 @@ export const metadata: Metadata = {
     locale: "id_ID",
     type: "website",
   },
-  other: {
-    "fb:app_id": "873918273645192", // Tameng tambahan untuk menghilangkan warning fb:app_id di FB Debugger
-  }
 };
 
 export default function RootLayout({
@@ -62,7 +59,7 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1008275913534968'); 
+            fbq('init', '4692122771066565'); 
             fbq('track', 'PageView');
           `}
         </Script>

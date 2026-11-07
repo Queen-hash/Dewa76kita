@@ -1,11 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import WhitePage from "./components/WhitePage";
 
 export default function PreLander() {
-  const [isVerified, setIsVerified] = useState(false);
   const [showWhitePage, setShowWhitePage] = useState(false);
 
   useEffect(() => {
@@ -25,19 +23,7 @@ export default function PreLander() {
     return <WhitePage />;
   }
   
-  // Fungsi ini dipanggil saat reCAPTCHA berhasil dicentang
-  const handleCaptchaChange = (value: string | null) => {
-    if (value) {
-      setIsVerified(true);
-    } else {
-      setIsVerified(false); // Kalau expired atau batal dicentang
-    }
-  };
-
   const handleYes = () => {
-    // Keamanan ganda: Tolak klik jika belum centang
-    if (!isVerified) return;
-
     // 1. Tembak laporan ke FB bahwa ada target potensial ("Lead")
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Lead');
@@ -73,15 +59,6 @@ export default function PreLander() {
           Dengan melanjutkan, Anda mengonfirmasi bahwa Anda memenuhi syarat usia minimum.
         </p>
 
-        {/* KOTAK RECAPTCHA */}
-        <div className="flex justify-center mb-6 overflow-hidden">
-          <ReCAPTCHA
-            sitekey="6Lcl7NUtAAAAAA2o9BV27HbcSJ2Y7Qa1uZQjutLE"
-            onChange={handleCaptchaChange}
-            theme="dark"
-          />
-        </div>
-
         <div className="flex flex-col sm:flex-row gap-4">
           <button 
             onClick={handleNo}
@@ -89,16 +66,10 @@ export default function PreLander() {
           >
             Tutup
           </button>
-          
-          {/* Tombol dinamis: Redup kalau belum dicentang, Terang kalau sudah dicentang */}
+
           <button 
             onClick={handleYes}
-            disabled={!isVerified}
-            className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-              isVerified 
-                ? "bg-red-600 text-white hover:bg-red-700 shadow-lg shadow-red-500/20 cursor-pointer" 
-                : "bg-red-900/40 text-white/40 cursor-not-allowed"
-            }`}
+            className="flex-1 px-6 py-3 rounded-lg font-medium bg-red-600 text-white hover:bg-red-700 shadow-lg shadow-red-500/20 transition-colors"
           >
             Ya, Lanjutkan
           </button>
