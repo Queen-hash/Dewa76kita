@@ -47,15 +47,13 @@ export default function BridgePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 flex flex-col items-center justify-between p-4 sm:p-6 font-sans text-white">
+    <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-teal-950 flex flex-col items-center justify-between p-4 sm:p-6 font-sans text-white">
       {/* Top Bar */}
       <header className="w-full max-w-lg flex items-center justify-between py-4">
         <div className="flex items-center gap-2">
-          <span className="w-9 h-9 rounded-xl bg-teal-500/20 border border-teal-500/40 text-teal-400 flex items-center justify-center font-bold text-lg shadow-sm">
-            Z
-          </span>
+          <img src="/logo.png" alt="Logo" className="h-9 w-auto object-contain" />
           <span className="font-semibold text-sm sm:text-base tracking-tight text-slate-200">
-            Zenith Portal Access
+            Dewa76 Portal Access
           </span>
         </div>
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
@@ -77,13 +75,13 @@ export default function BridgePage() {
           Selamat Datang!
         </h1>
         <p className="text-slate-400 text-sm leading-relaxed mb-6">
-          Klik tombol di bawah ini untuk langsung terhubung ke halaman pendaftaran resmi dan nikmati layanan prioritas.
+          Klik tombol di bawah ini untuk langsung terhubung ke halaman pendaftaran resmi kami, nikmati Bonus yang melimpah dan layanan prioritas.
         </p>
 
         {/* Feature Highlights */}
         <div className="grid grid-cols-3 gap-2.5 mb-7 text-xs">
           <div className="p-2.5 rounded-xl bg-slate-800/50 border border-slate-800 text-slate-300 flex flex-col items-center gap-1">
-            <span className="text-teal-400 font-bold">⚡ Cepat</span>
+            <span className="text-teal-400 font-bold">⚡ Pembayaran</span>
             <span className="text-[11px] text-slate-400">Instan</span>
           </div>
           <div className="p-2.5 rounded-xl bg-slate-800/50 border border-slate-800 text-slate-300 flex flex-col items-center gap-1">
@@ -100,7 +98,7 @@ export default function BridgePage() {
         <button
           onClick={handleContinue}
           disabled={loading}
-          className="w-full py-4 px-6 rounded-xl font-bold text-base text-white bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-400 hover:to-emerald-500 shadow-lg shadow-teal-500/25 active:scale-[0.98] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75"
+          className="w-full py-4 px-6 rounded-xl font-bold text-base text-white bg-linear-to-r from-teal-500 to-emerald-600 hover:from-teal-400 hover:to-emerald-500 shadow-lg shadow-teal-500/25 active:scale-[0.98] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75"
         >
           {loading ? (
             <>
@@ -112,7 +110,7 @@ export default function BridgePage() {
             </>
           ) : (
             <>
-              <span>Lanjutkan ke Pendaftaran</span>
+              <span>DAFTAR SEKARANG</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
@@ -127,9 +125,7 @@ export default function BridgePage() {
         <span>•</span>
         <a href="/article" className="hover:text-slate-300 transition-colors">Syarat & Ketentuan</a>
         <span>•</span>
-        <a href="/article" className="hover:text-slate-300 transition-colors">Blog Kesehatan</a>
-        <span>•</span>
-        <span>© 2026 Zenith Life. All rights reserved.</span>
+        <span>© 2026 Dewa76. All rights reserved.</span>
       </footer>
     </div>
   );
