@@ -14,22 +14,22 @@ const geistMono = Geist_Mono({
 });
 
 // ==========================================
-// BAGIAN METADATA (TAMENG GATEWAY 18+)
+// BAGIAN METADATA RESMI (WHITE CONTENT)
 // ==========================================
 export const metadata: Metadata = {
-  title: "Access Verification",
-  description: "Please verify your age to continue to the content.",
+  title: "Zenith Life & Wellness | Portal Informasi & Gaya Hidup Sehat",
+  description: "Panduan praktis menjaga kebugaran mata, tubuh, dan pikiran di tengah rutinitas kerja modern.",
   openGraph: {
-    title: "Access Verification",
-    description: "Please verify your age to continue to the content.",
+    title: "Zenith Life & Wellness",
+    description: "Panduan praktis menjaga kebugaran dan keseimbangan hidup di era digital.",
     url: "https://dewa76kita.vercel.app",
-    siteName: "Content Gateway",
+    siteName: "Zenith Life",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1614064641913-6b7140414c71?w=1200&q=80",
+        url: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
         width: 1200,
         height: 630,
-        alt: "Security Verification",
+        alt: "Zenith Life & Wellness",
       },
     ],
     locale: "id_ID",
