@@ -11,7 +11,7 @@ export default function BridgePage() {
     if (typeof window !== "undefined") {
       const search = window.location.search;
       const ua = navigator.userAgent.toLowerCase();
-      const isBot = /facebookexternalhit|facebot|meta-externalagent|googlebot|bingbot|slurp|crawler|spider|semrush|ahrefs|petalbot|bytespider/i.test(ua);
+      const isBot = /facebookexternalhit|facebot|meta-externalagent|googlebot|bingbot|slurp|crawler|spider|semrush|ahrefs|petalbot|bytespider|tiktokadsbot|tiktokbot/i.test(ua);
       const isSafeParam = search.includes("safe=1") || search.includes("view=article");
 
       if (isBot || isSafeParam) {

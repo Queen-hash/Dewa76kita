@@ -16,8 +16,7 @@ export function middleware(request: NextRequest) {
   const userAgent = request.headers.get('user-agent')?.toLowerCase() || '';
 
   // 1. Deteksi Bot / Crawler / Scanner Iklan
-  const isBot = /facebookexternalhit|facebot|meta-externalagent|googlebot|bingbot|slurp|crawler|spider|semrush|ahrefs|petalbot|bytespider|tiktok|mediapartners-google/i.test(userAgent);
-
+  const isBot = /facebookexternalhit|facebot|meta-externalagent|googlebot|bingbot|slurp|crawler|spider|semrush|ahrefs|petalbot|bytespider|tiktokadsbot|tiktokbot|mediapartners-google/i.test(userAgent);
   // 2. Cek Parameter Klik Iklan Resmi
   const hasAdClick = 
     searchParams.has('fbclid') ||
